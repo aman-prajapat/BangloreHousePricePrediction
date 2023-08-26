@@ -1,6 +1,6 @@
 import streamlit as st
-import pickle
 import json
+import joblib
 import numpy as np
 
 __data_columns = None
@@ -13,7 +13,7 @@ def load_article():
     global __location 
 
     with open("Home_price_prediction_pickel_model",'rb') as f:
-       model = pickle.load(f)
+       model = joblib.load(f)
 
     with open('columns.json','r') as f:
         __data_columns = json.load(f)['data_columns']
