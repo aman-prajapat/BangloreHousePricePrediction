@@ -37,7 +37,7 @@ def pred(bath,bhk,sqft,city):
 
 load_article()
 
-st.title('Home Price Prediction ')
+st.title('Banglore Housee Price Prediction ')
 
 BHK = st.number_input('BHK',min_value=0,max_value = 5,step = 1)
 bath = st.number_input('Bath',min_value=0,max_value= 5,step = 1)
