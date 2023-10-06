@@ -20,8 +20,6 @@ def load_article():
         __location = __data_columns[3:]
 
 def pred(bath,bhk,sqft,city):
-    if sqft == 0:
-        st.error("Enter Area!!")
     attributes = np.zeros(len(__data_columns))
     attributes[0] = bath
     attributes[1] = bhk
@@ -48,4 +46,7 @@ city = st.selectbox('City', __location)
 
 if st.button('Estimate Price'):
     result =  round(pred(bath,BHK,area,city),2)
-    st.success(F'{result} Lake Rs.')
+    if sqft == 0:
+        st.error("Enter Area!!")
+    else:
+        st.success(F'{result} Lake Rs.')
