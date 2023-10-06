@@ -39,8 +39,8 @@ load_article()
 
 st.title('Banglore Housee Price Prediction ')
 
-BHK = st.number_input('BHK',min_value=0,max_value = 5,step = 1)
-bath = st.number_input('Bath',min_value=0,max_value= 5,step = 1)
+BHK = st.number_input('BHK',min_value=0,max_value = 10,step = 1)
+bath = st.number_input('Bath',min_value=0,max_value= 10,step = 1)
 area = st.number_input('Area (Square Feet)',step = 1000)
 city = st.selectbox('City', __location)
 
