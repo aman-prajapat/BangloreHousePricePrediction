@@ -20,6 +20,8 @@ def load_article():
         __location = __data_columns[3:]
 
 def pred(bath,bhk,sqft,city):
+    if sqft == 0:
+        st.error("Enter Area!!")
     attributes = np.zeros(len(__data_columns))
     attributes[0] = bath
     attributes[1] = bhk
