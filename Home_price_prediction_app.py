@@ -46,7 +46,7 @@ city = st.selectbox('City', __location)
 
 if st.button('Estimate Price'):
     result =  round(pred(bath,BHK,area,city),2)
-    if sqft == 0:
+    if area == 0:
         st.error("Enter Area!!")
     else:
         st.success(F'{result} Lake Rs.')
